@@ -16,7 +16,12 @@ Nodeclub
 [node-url]: http://nodejs.org/download/
 
 ## 介绍
+WXOPEN Club 社区为国内最专业的微信小程序技术社区，致力于微信小程序的技术研究。
 
+[http://wxopen.club/about](http://wxopen.club/about)
+
+构建与 Nodeclub 开源社区项目。
+***
 Nodeclub 是使用 **Node.js** 和 **MongoDB** 开发的社区系统，界面优雅，功能丰富，小巧迅速，
 已在Node.js 中文技术社区 [CNode(http://cnodejs.org)](http://cnodejs.org) 得到应用，但你完全可以用它搭建自己的社区。
 
