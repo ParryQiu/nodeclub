@@ -18,7 +18,7 @@ Nodeclub
 ## 介绍
 WXOPEN Club 社区为国内最专业的微信小程序技术社区，致力于微信小程序的技术研究。
 
-[http://wxopen.club/about](http://wxopen.club/about)
+[http://wxopen.club/](http://wxopen.club/)
 
 构建与 Nodeclub 开源社区项目。
 ***
