@@ -20,7 +20,7 @@ WXOPEN Club 社区为国内最专业的微信小程序技术社区，致力于�
 
 [http://wxopen.club/](http://wxopen.club/)
 
-构建与 Nodeclub 开源社区项目。
+构建于 Nodeclub 开源社区项目。
 ***
 Nodeclub 是使用 **Node.js** 和 **MongoDB** 开发的社区系统，界面优雅，功能丰富，小巧迅速，
 已在Node.js 中文技术社区 [CNode(http://cnodejs.org)](http://cnodejs.org) 得到应用，但你完全可以用它搭建自己的社区。
