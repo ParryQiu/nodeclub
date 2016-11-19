@@ -31,8 +31,8 @@ exports.signup = function (req, res, next) {
     ep.emit('prop_err', '信息不完整。');
     return;
   }
-  if (loginname.length < 5) {
-    ep.emit('prop_err', '用户名至少需要5个字符。');
+  if (loginname.length < 3) {
+    ep.emit('prop_err', '用户名至少需要3个字符。');
     return;
   }
   if (!tools.validateId(loginname)) {
@@ -288,4 +288,3 @@ exports.updatePass = function (req, res, next) {
     }));
   }));
 };
-

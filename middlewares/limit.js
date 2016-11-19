@@ -43,7 +43,7 @@ exports.peruserperday = makePerDayLimiter('peruserperday', function (req) {
 });
 
 exports.peripperday = makePerDayLimiter('peripperday', function (req) {
-  var realIP = req.get('x-real-ip');
+  var realIP = req.connection.remoteAddress; //req.get('x-real-ip'); https://github.com/cnodejs/nodeclub/issues/902
   if (!realIP) {
     throw new Error('should provice `x-real-ip` header')
   }

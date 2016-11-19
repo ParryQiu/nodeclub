@@ -46,12 +46,20 @@ md.renderer.rules.code_block = function (tokens, idx /*, options*/) {
     + '</pre>';
 };
 
-var myxss = new jsxss.FilterXSS({
+var myxss = new jsxss.FilterXSS(
+  {
+
   onIgnoreTagAttr: function (tag, name, value, isWhiteAttr) {
     // 让 prettyprint 可以工作
     if (tag === 'pre' && name === 'class') {
       return name + '="' + jsxss.escapeAttrValue(value) + '"';
     }
+    if (tag === 'embed') {
+      return '<embed' + name + '="' + jsxss.escapeAttrValue(value) + '"' + '></embed>';
+    }
+  },
+  onTag:function  (tag, html, options) {
+    return html;
   }
 });
 

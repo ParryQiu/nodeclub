@@ -5,6 +5,8 @@ node_modules
 .naeindex
 coverage.html
 .monitor
+_resources
+.gitignore
 
 *.min.*.js
 *.min.*.css
