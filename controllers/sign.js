@@ -70,7 +70,7 @@ exports.signup = function (req, res, next) {
         mail.sendActiveMail(email, utility.md5(email + passhash + config.session_secret), loginname);
         res.render('sign/signup', {
           success: '欢迎加入 ' + config.name + '！我们已给您的注册邮箱发送了一封邮件，请点击里面的链接来激活您的帐号。' +
-          '<br/>未收到请留意是否被当成了垃圾邮件。'
+          '未收到邮件请留意是否被当成了垃圾邮件。'
         });
       });
 
