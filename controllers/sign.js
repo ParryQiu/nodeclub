@@ -62,15 +62,20 @@ exports.signup = function (req, res, next) {
     tools.bhash(pass, ep.done(function (passhash) {
       // create gravatar
       var avatarUrl = User.makeGravatar(email);
-      User.newAndSave(loginname, loginname, passhash, email, avatarUrl, false, function (err) {
+      //传递的参数修改成了 true，原来为 false，不验证邮箱。
+      User.newAndSave(loginname, loginname, passhash, email, avatarUrl, true, function (err) {
         if (err) {
           return next(err);
         }
         // 发送激活邮件
-        mail.sendActiveMail(email, utility.md5(email + passhash + config.session_secret), loginname);
+        //mail.sendActiveMail(email, utility.md5(email + passhash + config.session_secret), loginname);
+        //关闭邮箱验证
+        // res.render('sign/signup', {
+        //   success: '欢迎加入 ' + config.name + '！我们已给您的注册邮箱发送了一封邮件，请点击里面的链接来激活您的帐号。' +
+        //   '未收到邮件请留意是否被当成了垃圾邮件。'
+        // });
         res.render('sign/signup', {
-          success: '欢迎加入 ' + config.name + '！我们已给您的注册邮箱发送了一封邮件，请点击里面的链接来激活您的帐号。' +
-          '未收到邮件请留意是否被当成了垃圾邮件。'
+          success: '欢迎加入 ' + config.name + '！您现在可以直接登录社区进行交流，请遵守相关社区规范！'
         });
       });
 
