@@ -12,6 +12,12 @@ exports.faq = function (req, res, next) {
   res.render('static/faq');
 };
 
+//apps
+exports.apps = function (req, res, next) {
+  res.render('static/apps');
+};
+
+
 exports.getstart = function (req, res) {
   res.render('static/getstart', {
     pageTitle: '微信小程序新手入门资源'

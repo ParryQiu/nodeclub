@@ -103,6 +103,7 @@ router.post('/upload', auth.userRequired, topic.upload); //上传图片
 router.get('/about', staticController.about);
 router.get('/faq', staticController.faq);
 router.get('/getstart', staticController.getstart);
+router.get('/apps', staticController.apps);
 router.get('/robots.txt', staticController.robots);
 router.get('/api', staticController.api);
 
