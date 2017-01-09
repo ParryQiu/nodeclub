@@ -1,44 +1,86 @@
 <%- partial('../sidebar') %>
-
-<div id='content'>
-  <div class='panel'>
-    <div class='header'>
-      <ul class='breadcrumb'>
-        <li><a href='/'>主页</a><span class='divider'>/</span></li>
-        <li class='active'>小程序应用市场</li>
-      </ul>
-    </div>
-    <div class='inner topic'>
-      <div class="topic_content">
-        <%- markdown(multiline(function () {
+<style style="text/css">
+.appList{
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.appList li{
+  list-style: none;
+}
+.appList img{
+  width:100px;
+  height: 100px;
+  margin-right: 20px;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".appList img").mouseenter(function(){
+      $(this).attr("src","https://ogo92oag1.qnssl.com/"+$(this).attr("data")+"_qr.png");
+  }).mouseleave(function(){
+      $(this).attr("src","https://ogo92oag1.qnssl.com/"+$(this).attr("data")+".png");
+  });
+});
+</script>
+    <div id='content'>
+        <div class='panel'>
+            <div class='header'>
+                <ul class='breadcrumb'>
+                    <li><a href='/'>主页</a><span class='divider'>/</span></li>
+                    <li class='active'>小程序应用市场</li>
+                </ul>
+            </div>
+            <div class='inner topic'>
+                <div class="topic_content">
+                    <%- markdown(multiline(function () {
 /*
 
 >小程序将于 2017/01/07 正式发布，这里将推荐第一批最佳小程序应用。
 >也欢迎大家投稿或自荐，可私信联系 [微博@Parry](http://weibo.com/parryqiu) 。
+## 社交类
 
-## 1月7日上线小程序 - 社交类
+  <ul class="appList">
+    <li>
+      <img src="https://ogo92oag1.qnssl.com/app_fenda.png" data="app_fenda"/>
+    </li>
+  </ul>
 
-- [1月7日即将更新，请关注]
+## 旅游产品类
 
-## 1月7日上线小程序 - 旅游产品类
+<ul class="appList">
+  <li>
+    <img src="https://ogo92oag1.qnssl.com/app_fcz.png" data="app_fcz"/>
+  </li>
+</ul>
 
-- [1月7日即将更新，请关注]
+## 电商类
 
-## 1月7日上线小程序 - 电商类
+<ul class="appList">
+  <li>
+    <img src="https://ogo92oag1.qnssl.com/app_yz.png" data="app_yz"/>
+  </li>
+</ul>
 
-- [1月7日即将更新，请关注]
+## 工具类
 
-## 1月7日上线小程序 - 工具类
+<ul class="appList">
+  <li>
+    <img src="https://ogo92oag1.qnssl.com/app_ssj.png" data="app_ssj"/><img src="https://ogo92oag1.qnssl.com/app_kd100.png" data="app_kd100"/>
+  </li>
+</ul>
 
-- [1月7日即将更新，请关注]
+## 其他
 
-## 1月7日上线小程序 - 其他
-
-- [1月7日即将更新，请关注]
+<ul class="appList">
+  <li>
+    <img src="https://ogo92oag1.qnssl.com/app_lz.png" data="app_lz"/>
+  </li>
+</ul>
 
 */
         })) %>
-      </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
